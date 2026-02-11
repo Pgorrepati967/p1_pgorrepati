@@ -1,0 +1,8 @@
+ARG PROJECT=p1
+FROM ${PROJECT}-llm:latest 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+COPY gen_prompt.sh analyze.sh ./
+RUN chmod +x *.sh
+CMD ["bash", "analyze.sh"]

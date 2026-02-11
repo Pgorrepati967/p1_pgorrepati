@@ -1,0 +1,11 @@
+1. Dockerfile does not have a base Image call to Ubuntu
+2. Dockerfile has two different RUN lines when they could be connected using an &&
+3. Dockerfile not running an Bash installations to use Bash commands
+4. Dockerfile not downloading the LLM
+5. Dockerfile's CMD line is not formatted correctly to run the proper command
+
+# Gemini found and fixed all three problems described, they did not give a reasoning for all three changes, but in there code the changes were there
+#It also proved I was wrong for many of the things I thought were wrong and now I have a better understanding of how Dockerfiles work and build off of eachother
+https://gemini.google.com/share/dc2e97eef9ea
+
+
